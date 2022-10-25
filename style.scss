@@ -1,0 +1,147 @@
+@mixin font ($font-size, $font-weight, $color) {
+  font-family: 'Montserrat', sans-serif;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: $color;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.first_section {
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  background-image: url(./images/first_section_img.png);
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+.text {
+  color: white;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 595px;
+}
+
+.container {
+  margin: auto;
+  max-width: 1170px;
+  width: 100%;
+}
+
+.big_text {
+  @include font(64px, 700, white );
+  margin: 0;
+}
+
+.regulat_text {
+  @include font(20px, 500, white );
+  margin: 0;
+}
+
+
+.know_more {
+  padding: 10px 0;
+  background-color: #CF110A;
+  border-radius: 25px;
+  text-decoration: none;
+  max-width: 270px;
+  text-align: center;
+  @include font(24px, 700, white);
+}
+
+.second_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  height: 80vh;
+  
+}
+
+.diagram {
+  text-align: center;
+  @include font (28px, 700, black);
+
+  img {
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 25px;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 80px;
+  }
+}
+
+.third_section {
+  display: flex;
+  flex-direction: column;
+  @include font (36px, 700, black);
+  text-align: center;
+  background-color: #EFEFEF;
+  
+
+  .coments {
+    max-width: fit-content;
+    border: 2px solid #34e7db;
+    padding: 20px;
+    background-color: white;
+
+    .grade {
+      display: flex;
+    }
+    
+  }
+  
+  .left {
+    float: left;
+    display: block;
+  }
+  .right{
+    float: right;
+    display: block;
+  }
+
+  .coments {
+    margin-bottom: 40px;
+  }
+  .text_review {
+    @include font (16px, 500, black);
+  }
+
+  .name_date {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+
+  .name {
+    text-align: center;
+    @include font (16px, 500, black);
+    margin: 0;
+  }
+
+  .date {
+    @include font (12px, 500, black);
+    margin: 0;
+  }
+
+  .coment {
+    align-self: center;
+    padding: 10px 25px;
+    background-color: #CF110A;
+    border-radius: 25px;
+    text-decoration: none;
+    max-width: 270px;
+    text-align: center;
+    @include font(24px, 700, white);
+  }
+}
+
