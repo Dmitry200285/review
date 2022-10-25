@@ -5,6 +5,10 @@
   color: $color;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
 }
@@ -86,6 +90,7 @@ body {
   @include font (36px, 700, black);
   text-align: center;
   background-color: #EFEFEF;
+  
   
 
   .coments {
